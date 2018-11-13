@@ -50,4 +50,4 @@ RUN echo "/usr/local/lib" > /etc/ld.so.conf.d/local.conf && ldconfig
 USER 26
 
 # Copy the custom configuration which will be passed down to the server
-COPY postgresql.conf.sample $APP_DATA/src/postgresql-cfg/debezium.conf
+COPY postgres/9.6/postgresql.conf.sample $APP_DATA/src/postgresql-cfg/debezium.conf
