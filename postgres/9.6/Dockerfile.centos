@@ -50,6 +50,5 @@ RUN echo "/usr/local/lib" > /etc/ld.so.conf.d/local.conf && ldconfig
 USER 26
 
 # Copy the custom configuration which will be passed down to the server
-RUN pwd
-RUN ls
+COPY postgres/9.6/docker-entrypoint-initdb.d /docker-entrypoint-initdb.d
 COPY postgres/9.6/postgresql.conf.sample $APP_DATA/src/postgresql-cfg/debezium.conf
